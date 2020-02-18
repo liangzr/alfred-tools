@@ -7,7 +7,7 @@ More elegant way to develop with Alfred Workflow
 
 ## Tools
 - **AlfredResult**: Generate JSON output of Alfred Workflow
-- **HistoryUtil**: Save user history easily
+- **createHistory**: Save user history easily
 
 ## License
 MIT

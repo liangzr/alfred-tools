@@ -36,6 +36,7 @@
         "import/extensions": [2, "always", {
             "ts": "never",
             "js": "never"
-        }]
+        }],
+        "no-console": 0
     }
 }
