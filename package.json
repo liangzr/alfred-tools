@@ -10,7 +10,7 @@
     "build:commonjs": "tsc --outDir ./es",
     "build:es": "tsc --outDir ./lib",
     "prepublishOnly": "npm run lint && npm run clean && npm run build",
-    "lint": "eslint ./src/*"
+    "lint": "eslint ./src/**/*"
   },
   "keywords": ["alfred", "workflow"],
   "author": "liangzr <liangzr@outlook.comk>",
