@@ -7,9 +7,8 @@
   "scripts": {
     "dev": "cd example && npm run dev",
     "clean": "rimraf es lib dist @types",
-    "build": "npm run clean && npm run build:es && npm run build:commonjs",
-    "build:commonjs": "tsc --outDir ./es",
-    "build:es": "tsc --outDir ./lib",
+    "build": "npm run clean && npm run build:commonjs",
+    "build:commonjs": "tsc --outDir ./lib",
     "prepublishOnly": "npm run lint && npm run clean && npm run build",
     "lint": "eslint ./src/**/*"
   },
