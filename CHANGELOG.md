@@ -1,6 +1,10 @@
 Changelog
 ===
 
+## [1.0.3] - 2020-02-18
+### Changed
+- Changed the historyUtil interface
+
 ## [1.0.2] - 2020-02-18
 ### Changed
 - Updating the input param of append using AlfredResult.
