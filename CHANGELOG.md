@@ -1,6 +1,11 @@
-# Changelog
+Changelog
+===
 
-## [1.0.0] - 2020-02-18
+## [1.0.2] - 2020-02-18
+### Changed
+- Updating the input param of append using AlfredResult.
+
+## [1.0.1] - 2020-02-18
 ### Changed
 - The `add` interface of AlfredResult has renamed to `append`.
 
