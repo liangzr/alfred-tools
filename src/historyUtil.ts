@@ -2,17 +2,16 @@ import * as fs from 'fs';
 import * as fse from 'fs-extra';
 import { IHistoryConfig } from './types/history';
 
-class HistoryUtil {
-  /**
-   * Max number of history
-   */
+class HistoryUtil<T =any> {
   maxNum = 10
 
-  /**
-   * File path of history file
-   */
   filepath = ''
 
+  /**
+   *
+   * @param filepath File path of history file
+   * @param maxNum Max number of history
+   */
   constructor(filepath: string, maxNum: number) {
     this.filepath = filepath;
     this.maxNum = maxNum;
@@ -22,11 +21,11 @@ class HistoryUtil {
 
   /**
    * Write history to local file
-   * @param history history data
+   * @param serializedHistoryList history data
    */
-  writeHistoryFile(history) {
+  writeHistoryFile(serializedHistoryList: string) {
     try {
-      fs.writeFileSync(this.filepath, history);
+      fs.writeFileSync(this.filepath, serializedHistoryList);
     } catch (err) {
       console.warn('Write history failed: ', err);
     }
@@ -36,7 +35,7 @@ class HistoryUtil {
    * Read history from local file
    * @param max count
    */
-  readHistoryFile(max = 999) {
+  readHistoryFile(max = 999): T[] {
     try {
       const str = fs.readFileSync(this.filepath);
       const histories = JSON.parse(str.toString());
@@ -53,7 +52,7 @@ class HistoryUtil {
    * Update history
    * @param nextHistory history data
    */
-  updateHistory(nextHistory) {
+  updateHistory(nextHistory: T): void {
     const historyList = this.readHistoryFile() || [];
     const index = historyList.findIndex((x) => x === nextHistory);
     if (index > -1) {
@@ -72,4 +71,4 @@ class HistoryUtil {
   }
 }
 
-export default ({ filepath, maxNum = 10 }: IHistoryConfig) => new HistoryUtil(filepath, maxNum);
+export default HistoryUtil;

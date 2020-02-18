@@ -3,6 +3,7 @@
   "version": "1.0.2",
   "description": "",
   "main": "lib/index.js",
+  "types": "@types",
   "scripts": {
     "dev": "cd example && npm run dev",
     "clean": "rimraf es lib dist @types",

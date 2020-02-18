@@ -10,7 +10,7 @@ export default class AlfredResult {
    * Add some options
    * @param params Entire params
    */
-  append(params: IAlfredItem[]): AlfredResult
+  append(params: IAlfredItem[]): this
 
   /**
    * Add a new option
@@ -18,7 +18,7 @@ export default class AlfredResult {
    * @param subtitle item subtitle
    * @param params other params of item
    */
-  append(title: string | IAlfredItem[], arg: string = '', subtitle: string = '', params: Partial<IAlfredItem> = {}): AlfredResult {
+  append(title: string | IAlfredItem[], arg: string = '', subtitle: string = '', params: Partial<IAlfredItem> = {}): this {
     if (Array.isArray(title)) {
       this.result.items = this.result.items.concat(title);
     } else {
@@ -36,7 +36,7 @@ export default class AlfredResult {
   /**
    * Clear all options
    */
-  clear(): AlfredResult {
+  clear(): this {
     this.result.items = [];
 
     return this;
