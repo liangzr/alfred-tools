@@ -1,7 +1,5 @@
 import { IAlfredResult } from './types';
 
-
-// eslint-disable-next-line import/prefer-default-export
 export class AlfredResult {
   result: IAlfredResult = {
     items: [],
