@@ -1,7 +1,7 @@
 import AlfredResult from './alfredResult';
-import historyUtil from './historyUtil';
+import HistoryUtil from './historyUtil';
 
 export {
   AlfredResult,
-  historyUtil,
+  HistoryUtil,
 };

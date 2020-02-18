@@ -1,7 +1,7 @@
 Changelog
 ===
 
-## [1.0.3] - 2020-02-18
+## [1.0.4] - 2020-02-18
 ### Changed
 - Changed the historyUtil interface
 
