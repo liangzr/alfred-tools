@@ -1,15 +1,10 @@
 /* eslint-disable no-dupe-class-members */
 import { IAlfredResult, IAlfredItem } from './types/alfred';
 
-interface IAlfredAppendConfig {
-  (title: string, subtitle: string, params: Partial<IAlfredItem>): AlfredResult
-}
-
 export default class AlfredResult {
   result: IAlfredResult = {
     items: [],
   }
-
 
   /**
    * Add some options
@@ -23,12 +18,13 @@ export default class AlfredResult {
    * @param subtitle item subtitle
    * @param params other params of item
    */
-  append(title: string | IAlfredItem[], subtitle: string = '', params: Partial<IAlfredItem> = {}): AlfredResult {
+  append(title: string | IAlfredItem[], arg: string = '', subtitle: string = '', params: Partial<IAlfredItem> = {}): AlfredResult {
     if (Array.isArray(title)) {
       this.result.items = this.result.items.concat(title);
     } else {
       this.result.items.push({
         title,
+        arg,
         subtitle,
         ...params,
       });
