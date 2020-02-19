@@ -1,5 +1,8 @@
 Changelog
 ===
+## [1.0.7] - 2020-02-19
+### Added
+- Support `info` and `alert` interface of AlfredResult
 
 ## [1.0.6] - 2020-02-18
 ### Changed
