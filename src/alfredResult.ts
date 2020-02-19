@@ -1,4 +1,5 @@
 /* eslint-disable no-dupe-class-members */
+import * as path from 'path';
 import { IAlfredResult, IAlfredItem } from './types/alfred';
 
 export default class AlfredResult {
@@ -27,6 +28,46 @@ export default class AlfredResult {
         arg,
         subtitle,
         ...params,
+      });
+    }
+
+    return this;
+  }
+
+  /**
+   * Show informations
+   * @param items infomations
+   */
+  info(items: string[]): this {
+    if (Array.isArray(items)) {
+      items.forEach((title: string) => {
+        this.append([{
+          title,
+          valid: false,
+          icon: {
+            path: path.resolve(__dirname, '../assets/ic_bulb.png'),
+          },
+        }]);
+      });
+    }
+
+    return this;
+  }
+
+  /**
+   * Show alert messages
+   * @param items error informations
+   */
+  alert(items: string[]): this {
+    if (Array.isArray(items)) {
+      items.forEach((title: string) => {
+        this.append([{
+          title,
+          valid: false,
+          icon: {
+            path: path.resolve(__dirname, '../assets/ic_alert.png'),
+          },
+        }]);
       });
     }
 
