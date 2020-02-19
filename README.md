@@ -13,10 +13,10 @@ More elegant way to develop with Alfred Workflow
 #### append(title: string, args?: string, subtitle?:string, params: IAlfredItem): AlfredResult
 Append new alfred option item
 
-#### info(items: string[]): AlfredResult
+#### info(title: string, subtitle: string = ''): AlfredResult
 Append new alfred info option item
 
-#### alert(items: string[]): AlfredResult
+#### alert(title: string, subtitle: string = ''): AlfredResult
 Append new alfred alert option item
 
 #### clear(): AlfredResult
