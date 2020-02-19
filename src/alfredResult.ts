@@ -35,41 +35,33 @@ export default class AlfredResult {
   }
 
   /**
-   * Show informations
-   * @param items infomations
+   * Append a info message
    */
-  info(items: string[]): this {
-    if (Array.isArray(items)) {
-      items.forEach((title: string) => {
-        this.append([{
-          title,
-          valid: false,
-          icon: {
-            path: path.resolve(__dirname, '../assets/ic_bulb.png'),
-          },
-        }]);
-      });
-    }
+  info(title: string, subtitle: string = ''): this {
+    this.append([{
+      title,
+      subtitle,
+      valid: false,
+      icon: {
+        path: path.resolve(__dirname, '../assets/ic_bulb.png'),
+      },
+    }]);
 
     return this;
   }
 
   /**
-   * Show alert messages
-   * @param items error informations
+   * Append a info message
    */
-  alert(items: string[]): this {
-    if (Array.isArray(items)) {
-      items.forEach((title: string) => {
-        this.append([{
-          title,
-          valid: false,
-          icon: {
-            path: path.resolve(__dirname, '../assets/ic_alert.png'),
-          },
-        }]);
-      });
-    }
+  alert(title: string, subtitle: string = ''): this {
+    this.append([{
+      title,
+      subtitle,
+      valid: false,
+      icon: {
+        path: path.resolve(__dirname, '../assets/ic_alert.png'),
+      },
+    }]);
 
     return this;
   }
