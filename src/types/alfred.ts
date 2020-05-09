@@ -1,5 +1,5 @@
 
-export interface IAlfredItem {
+export interface IAlfredResultItem {
   /**
    * This is a unique identifier for the item which allows help Alfred to learn about
    * this item for subsequent sorting and ordering of the user's actioned results.
@@ -116,5 +116,5 @@ export interface IAlfredResult {
    * A Script Filter is required to return an items array of zero or more items.
    * Each item describes a result row displayed in Alfred.
    */
-  items: IAlfredItem[]
+  items: IAlfredResultItem[]
 }
