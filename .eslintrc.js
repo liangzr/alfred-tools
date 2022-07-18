@@ -31,6 +31,7 @@ module.exports = {
     },
   },
   rules: {
+    'semi': [2, 'never'],
     'no-unused-vars': 0,
     '@typescript-eslint/no-unused-vars': ['error'],
     'import/prefer-default-export': 0,

@@ -2,3 +2,4 @@ src
 node_moduels
 .eslintrc
 .gitignore
+.vscode

@@ -1,7 +1,13 @@
-import AlfredResult from './lib/alfredResult';
-import HistoryUtil from './lib/historyUtil';
+import AlfredOutputBuilder from './AlfredOutputBuilder'
+import Store from './Store'
+import history from './history'
+import RecentlyUsed from './RecentlyUsed'
+
+export * from './types/alfred'
 
 export {
-  AlfredResult,
-  HistoryUtil,
-};
+  AlfredOutputBuilder,
+  history,
+  RecentlyUsed,
+  Store,
+}

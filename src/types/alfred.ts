@@ -1,5 +1,5 @@
 
-export interface IAlfredResultItem {
+export interface AlfredOutputItem {
   /**
    * This is a unique identifier for the item which allows help Alfred to learn about
    * this item for subsequent sorting and ordering of the user's actioned results.
@@ -96,7 +96,7 @@ export interface IAlfredResultItem {
   variables?: Record<string, any>
 }
 
-export interface IAlfredResult {
+export interface AlfredOutput {
   /**
    * Rerunning script filters automatically in seconds
    */
@@ -105,7 +105,7 @@ export interface IAlfredResult {
   /**
    * Variables can be passed out of the script filter within a variables object.
    * This is useful for two things. Firstly, these variables will be passed out of the script
-   * filter's outputs when actioning a result. Secondly, any variables passed out of a script
+   * filter's outputs when action a result. Secondly, any variables passed out of a script
    * will be passed back in as environment variables when the script is run within the same
    * session. This can be used for very simply managing state between runs as the user types
    * input or when the script is set to re-run after an interval.
@@ -116,5 +116,7 @@ export interface IAlfredResult {
    * A Script Filter is required to return an items array of zero or more items.
    * Each item describes a result row displayed in Alfred.
    */
-  items: IAlfredResultItem[]
+  items: AlfredOutputItem[]
 }
+
+export type OptionalItemConfig = Partial<Omit<AlfredOutputItem, 'title' | 'arg' | 'subtitle'>>
