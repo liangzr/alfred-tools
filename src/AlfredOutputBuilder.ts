@@ -67,7 +67,7 @@ export default class AlfredOutputBuilder {
    * Shortcut for `output.tips()`, built-in icon for information
    */
   alert(title: string, subtitle = '') {
-    this.tips(title, subtitle, path.resolve(__dirname, '.../assets/ic_bulb.png'))
+    this.tips(title, subtitle, path.resolve(__dirname, '../assets/ic_alert.png'))
 
     return this
   }
