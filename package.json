@@ -1,6 +1,6 @@
 {
   "name": "alfred-tools",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "",
   "main": "lib/index.js",
   "types": "@types",
@@ -12,7 +12,10 @@
     "prepublishOnly": "npm run lint && npm run clean && npm run build",
     "lint": "eslint ./src/**/*"
   },
-  "keywords": ["alfred", "workflow"],
+  "keywords": [
+    "alfred",
+    "workflow"
+  ],
   "author": "liangzr <liangzr@outlook.comk>",
   "license": "ISC",
   "devDependencies": {
