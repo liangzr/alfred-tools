@@ -60,7 +60,7 @@ export default class RecentlyUsed<DataType = any> {
    */
   record(data: DataType): void {
     const records = this.read()
-    const index = records.findIndex((x) => x === data)
+    const index = records.findIndex((x) => JSON.stringify(x) === JSON.stringify(data))
     if (index > -1) {
       records.splice(index, 1)
     }

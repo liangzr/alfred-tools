@@ -11,7 +11,7 @@ let store: RecentlyUsed<HistoryConfig>
 const defaultConfig = {}
 
 const history = Object.freeze({
-  read(limit?: number): Partial<AlfredOutputItem>[] {
+  read(limit?: number): AlfredOutputItem[] {
     return store.read(limit).map((item) => ({
       title: item.title,
       subtitle: item.subtitle,
