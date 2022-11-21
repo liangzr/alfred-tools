@@ -72,7 +72,7 @@ export interface AlfredOutputItem {
    * valid attribute to mark if the result is valid based on the modifier selection and set a
    * different arg to be passed out if actioned with the modifier.
    */
-  mods?: Partial<Record<'alt'| 'cmd' | 'cmd+alt', Partial<Record<'valid' | 'arg' | 'subtitle', string>>>>
+  mods?: ALfredMods
 
   /**
    * The text element defines the text the user will get when copying the selected result row with
@@ -94,6 +94,18 @@ export interface AlfredOutputItem {
    * the same name.
    */
   variables?: Record<string, any>
+}
+
+export interface AlfredMod{
+  valid?: boolean
+  arg?: string
+  subtitle?: string
+}
+
+export interface ALfredMods {
+  alt?: AlfredMod
+  cmd?: AlfredMod
+  'cmd+alt'?: AlfredMod
 }
 
 export interface AlfredOutput {
